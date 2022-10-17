@@ -24,7 +24,7 @@ typedef struct flags
 } flags_t;
 
 /* get functions */
-int get_flag(char str, flags_t *f);
+int get_flag(char c, flags_t *f);
 int (*get_print(char c))(va_list, flags_t *f);
 
 /**
