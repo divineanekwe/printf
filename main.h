@@ -41,4 +41,9 @@ typedef struct print_help
 	int (*f)(va_list arg, flags_t *f);
 } print_help_t;
 
+/* print number(s) prototypes */
+int int_count(int n);
+void print_num(int n);
+int print_i(va_list arg, flags_t *f);
+
 #endif /* MAIN_H */
