@@ -9,6 +9,8 @@
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _putstr(char *str);
+int print_str(va_list arg);
+int print_char(va_list arg);
 
 /**
   * struct flags - activates specified flag(s) to _printf()
