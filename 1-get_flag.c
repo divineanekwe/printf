@@ -2,17 +2,17 @@
 
 /**
   * get_flag - activates specified flag in _printf()
-  * @str: String with flag(s) as sub-string
+  * @c: Character flag
   * @f: Pointer variable with flags_t type
   *
   * Return: 1, if a flag is activated.
   * Otherwise, return 0
   */
-int get_flag(char str, flags_t *f)
+int get_flag(char c, flags_t *f)
 {
 	int i = 0;
 
-	switch (str)
+	switch (c)
 	{
 		case '+':
 			i = 1;
