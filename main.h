@@ -5,7 +5,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
-/** print arguments */
+/** print prototypes */
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _putstr(char *str);
@@ -23,7 +23,7 @@ typedef struct flags
 	int hash;
 } flags_t;
 
-/* get functions */
+/* get prototypes */
 int get_flag(char c, flags_t *f);
 int (*get_print(char c))(va_list, flags_t *f);
 
