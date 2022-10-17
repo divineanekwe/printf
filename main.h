@@ -25,5 +25,18 @@ typedef struct flags
 
 /* get functions */
 int get_flag(char str, flags_t *f);
+int (*get_print(char c))(va_list, flags_t *f);
+
+/**
+  * struct print_help - chooses the correct function based on
+  * format specifications passed to _printf function
+  * @c: Format specification
+  * @f: Pointer to correct function
+  */
+typedef struct print_help
+{
+	char c;
+	int (*f)(va_list arg, flags_t *f);
+} print_help_t;
 
 #endif /* MAIN_H */
