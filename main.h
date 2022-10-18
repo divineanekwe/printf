@@ -39,7 +39,13 @@ struct fmt
  */
 typedef struct fmt fmt_t;
 
+#include <unistd.h>
+#include <stdarg.h>
+#include <stdlib.h>
+
+/* print arguments */
 int _printf(const char *format, ...);
+<<<<<<< HEAD
 int handle_print(const char *fmt, int *i,
 va_list list, char buffer[], int flags, int width, int precision, int size);
 
@@ -113,5 +119,25 @@ int is_digit(char);
 
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
+=======
+int _putchar(char c);
+int _putstr(char *str);
+
+/**
+  * struct flags - activates specified flag(s) to _printf()
+  * @plus: '+' flag
+  * @space: ' ' flag
+  * @hash: '#' flag
+  */
+typedef struct flags
+{
+	int plus;
+	int space;
+	int hash;
+} flags_t;
+
+/* get functions */
+int get_flag(char s, flags_t *f);
+>>>>>>> b926342f0d0c1ea37b3191d6cf4a3c5fb52d2ca8
 
 #endif
