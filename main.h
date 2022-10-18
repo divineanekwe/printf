@@ -9,8 +9,8 @@
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _putstr(char *str);
-int print_str(va_list arg);
-int print_char(va_list arg);
+int print_s(va_list arg);
+int print_c(va_list arg);
 int print_S(va_list arg);
 int print_r(va_list arg);
 int print_R(va_list arg);
