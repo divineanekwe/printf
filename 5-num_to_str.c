@@ -1,4 +1,4 @@
-#inclue "main.h"
+#include "main.h"
 
 /**
   * num_to_str - converts number in specified base to string
