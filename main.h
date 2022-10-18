@@ -45,5 +45,6 @@ typedef struct print_help
 int int_count(int n);
 void print_num(int n);
 int print_i(va_list arg, flags_t *f);
+char *num_to_str(unsigned long int num, int base, int type);
 
 #endif /* MAIN_H */
