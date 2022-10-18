@@ -46,5 +46,6 @@ int int_count(int n);
 void print_num(int n);
 int print_i(va_list arg, flags_t *f);
 char *num_to_str(unsigned long int num, int base, int type);
+int print_u(va_list arg);
 
 #endif /* MAIN_H */
