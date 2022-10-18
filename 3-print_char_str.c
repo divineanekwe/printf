@@ -6,7 +6,7 @@
   *
   * Return: Number of characters printed
   */
-int print_str(va_list arg)
+int print_s(va_list arg)
 {
 	char *str = va_arg(arg, char *);
 
@@ -21,7 +21,7 @@ int print_str(va_list arg)
   *
   * Return: Always 1
   */
-int print_char(va_list arg)
+int print_c(va_list arg)
 {
 	_putchar(va_arg(1, int));
 	return (1);
