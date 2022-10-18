@@ -3,12 +3,12 @@
 /**
   * get_flag - activates specified flag in _printf()
   * @c: Character flag
-  * @f: Pointer variable with flags_t type
+  * @flag: Pointer variable with flags_t type
   *
   * Return: 1, if a flag is activated.
   * Otherwise, return 0
   */
-int get_flag(char c, flags_t *f)
+int get_flag(char c, flags_t *flag)
 {
 	int i = 0;
 
@@ -16,15 +16,15 @@ int get_flag(char c, flags_t *f)
 	{
 		case '+':
 			i = 1;
-			f->plus = i;
+			flag->plus = i;
 			break;
 		case ' ':
 			i = 1;
-			f->space = i;
+			flag->space = i;
 			break;
 		case '#':
 			i = 1;
-			f->hash = i;
+			flag->hash = i;
 			break;
 	}
 	return (i);

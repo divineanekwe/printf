@@ -36,7 +36,7 @@ int (*get_print(char c))(va_list, flags_t *)
 	{
 		if (types[i].c == c)
 		{
-			return (types[i].f);
+			return (types[i].print_func);
 		}
 	}
 	return (NULL);

@@ -34,7 +34,7 @@ int print_X(va_list arg, flags_t *flag)
 {
 	int count = 0;
 	unsigned int n = va_arg(arg, unsigned int);
-	char *str = num_to_str(n, 16, 1);
+	char *str = num_to_str(n, 16, 0);
 
 	if (flag->hash == 1 && str[0] != '0')
 		count += _putstr("0X");

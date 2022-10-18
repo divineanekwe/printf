@@ -22,7 +22,7 @@ char *num_to_str(unsigned long int num, int base, int type)
 	ptr = &buffer[49];
 	*ptr = '\0';
 	do {
-		*(--ptr) = check[num & base];
+		*(--ptr) = check[num % base];
 		num /= base;
 	} while (num != 0);
 	return (ptr);

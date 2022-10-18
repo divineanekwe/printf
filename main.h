@@ -38,12 +38,12 @@ int (*get_print(char c))(va_list, flags_t *);
   * struct print_help - chooses the correct function based on
   * format specifications passed to _printf function
   * @c: Format specification
-  * @f: Pointer to correct function
+  * @print_func: Pointer to correct function
   */
 typedef struct print_help
 {
 	char c;
-	int (*f)(va_list arg, flags_t *flag);
+	int (*print_func)(va_list arg, flags_t *flag);
 } print_help_t;
 
 /* print number(s) prototypes */
