@@ -47,5 +47,9 @@ void print_num(int n);
 int print_i(va_list arg, flags_t *f);
 char *num_to_str(unsigned long int num, int base, int type);
 int print_u(va_list arg);
+int print_x(va_list arg, flags_t *f);
+int print_X(va_list arg, flags_t *f);
+int print_b(va_list arg);
+int print_o(va_list arg, flags_t *f);
 
 #endif /* MAIN_H */
