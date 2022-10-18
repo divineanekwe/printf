@@ -35,7 +35,7 @@ void print_num(int n)
 {
 	unsigned int num;
 
-	if (i < 0)
+	if (n < 0)
 	{
 		_putchar('-');
 		num = -1 * n;
@@ -78,7 +78,7 @@ int print_i(va_list arg, flags_t *f)
   *
   * Return: Number of characters printed
   */
-int print_u(va_list arg)
+int print_u(va_list arg, __attribute__((unused)) flags_t *flag)
 {
 	unsigned int n = va_arg(arg, unsigned int);
 	char *str = num_to_str(n, 10, 0);
@@ -94,7 +94,7 @@ int print_u(va_list arg)
   *
   * Return: The number of character(s) printed
   */
-int print_p(va_list arg)
+int print_p(va_list arg, __attribute__((unused)) flags_t *flag)
 {
 	register int count = 0;
 	char *str;

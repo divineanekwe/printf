@@ -12,7 +12,7 @@
   *
   * Return: The number of character(s) printed
   */
-int print_S(va_list arg)
+int print_S(va_list arg, __attribute__((unused)) flags_t *flag)
 {
 	char *hex_str;
 	int i, count = 0;
@@ -46,7 +46,7 @@ int print_S(va_list arg)
   * Return: The number of character(s) printed,
   * including the terminating null charater '\0'
   */
-int print_r(va_list arg)
+int print_r(va_list arg, __attribute__((unused)) flags_t *flag)
 {
 	int i, count = 0;
 	char *str = va_arg(arg, char *);
@@ -67,7 +67,7 @@ int print_r(va_list arg)
   * Return: The number of character(s) printed,
   * including the terminating null character '\0'
   */
-int print_R(va_list arg)
+int print_R(va_list arg, __attribute__((unused)) flags_t *flag)
 {
 	int i, j;
 	char *str = va_arg(arg, char *);
@@ -98,7 +98,8 @@ int print_R(va_list arg)
   *
   * Return: Always 1
   */
-int print_percent(void)
+int print_percent(va_list arg, __attribute__((unused)) flags_t *flag)
 {
+	(void) arg;
 	return (_putchar('%'));
 }

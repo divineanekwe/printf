@@ -42,13 +42,13 @@ int _printf(const char *format, ...)
 			print_func = get_print(*str);
 			count += (print_func)
 				? print_func(arg, &flags)
-				: _printf("%%%c", *str)
+				: _printf("%%%c", *str);
 		} else
 		{
 			count += _putchar(*str);
 		}
 	}
 	_putchar(-1);
-	va_end(arguments);
+	va_end(arg);
 	return (count);
 }
