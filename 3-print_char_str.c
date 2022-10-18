@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
-  * print_str - prints a string
+  * print_s - prints a string
   * @arg: Variable arguments in _printf
+  * @flag: Pointer to flags_t type
   *
   * Return: Number of characters printed
   */
@@ -16,8 +17,9 @@ int print_s(va_list arg, __attribute__((unused)) flags_t *flag)
 }
 
 /**
-  * print_char - prints a character
+  * print_c - prints a character
   * @arg: Variable arguments in _printf
+  * @flag: Pointer to flags_t type
   *
   * Return: Always 1
   */

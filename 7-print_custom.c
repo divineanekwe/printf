@@ -3,6 +3,7 @@
 /**
   * print_S - prints the string
   * @arg: Variable arguments in _printf
+  * @flag: Pointer to flags_t type
   *
   * Description - non printable characters
   * (0 < ASCII value < 32 or >= 127) are
@@ -42,6 +43,7 @@ int print_S(va_list arg, __attribute__((unused)) flags_t *flag)
 /**
   * print_r - prints a string in reverse
   * @arg: Variable arguments in _printf
+  * @flag: Pointer to flags_t type
   *
   * Return: The number of character(s) printed,
   * including the terminating null charater '\0'
@@ -63,6 +65,7 @@ int print_r(va_list arg, __attribute__((unused)) flags_t *flag)
 /**
   * print_R - prints a string encoded with rot13
   * @arg: Variable arguments in _printf
+  * @flag: Pointer to flags_t type
   *
   * Return: The number of character(s) printed,
   * including the terminating null character '\0'
@@ -95,6 +98,8 @@ int print_R(va_list arg, __attribute__((unused)) flags_t *flag)
 
 /**
   * print_percent - prints a percentage sign
+  * @arg: Variable arguments in _printf
+  * @flag: Pointer to flags_t type
   *
   * Return: Always 1
   */

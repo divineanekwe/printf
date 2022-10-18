@@ -53,18 +53,18 @@ void print_num(int n)
 /**
   * print_i - prints an integer number
   * @arg: Variable arguments in _printf
-  * @f: Pointer to flags_t type
+  * @flag: Pointer to flags_t type
   *
   * Return: Number of characters printed
   */
-int print_i(va_list arg, flags_t *f)
+int print_i(va_list arg, flags_t *flag)
 {
 	int n = va_arg(arg, int);
 	int count = int_count(n);
 
-	if (f->plus == 0 && f->space == 1 && n >= 0)
+	if (flag->plus == 0 && flag->space == 1 && n >= 0)
 		count += _putchar(' ');
-	if (f->plus == 1 && n >= 0)
+	if (flag->plus == 1 && n >= 0)
 		count += _putchar('+');
 	if (n <= 0)
 		++count;
@@ -75,6 +75,7 @@ int print_i(va_list arg, flags_t *f)
 /**
   * print_u - prints an unsigned integer
   * @arg: Variable arguments in _printf
+  * @flag: Pointer to flags_t type
   *
   * Return: Number of characters printed
   */
@@ -89,6 +90,7 @@ int print_u(va_list arg, __attribute__((unused)) flags_t *flag)
 /**
   * print_p - prints the address of a variable in hexadecimal
   * @arg: Variable arguments in _printf
+  * @flag: Pointer to flags_t type
   *
   * Description - the hexadecimal is printed in uppercase
   *
