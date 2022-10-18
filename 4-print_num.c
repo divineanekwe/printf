@@ -85,3 +85,25 @@ int print_u(va_list arg)
 
 	return (_putstr(str));
 }
+
+/**
+  * print_p - prints the address of a variable in hexadecimal
+  * @arg: Variable arguments in _printf
+  *
+  * Description - the hexadecimal is printed in uppercase
+  *
+  * Return: The number of character(s) printed
+  */
+int print_p(va_list arg)
+{
+	register int count = 0;
+	char *str;
+	unsigned long int addr = va_arg(arg, unsigned long int);
+
+	if (!addr)
+		return (_putstr("(nil)"));
+	str = num_to_str(addr, 16, 1);
+	count += _putstr("0x");
+	count += _putstr(str);
+	return (count);
+}
