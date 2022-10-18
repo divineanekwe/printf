@@ -71,3 +71,17 @@ int print_i(va_list arg, flags_t *f)
 	print_num(n);
 	return (count);
 }
+
+/**
+  * print_u - prints an unsigned integer
+  * @arg: Variable arguments in _printf
+  *
+  * Return: Number of characters printed
+  */
+int print_u(va_list arg)
+{
+	unsigned int n = va_arg(arg, unsigned int);
+	char *str = num_to_str(n, 10, 0);
+
+	return (_putstr(str));
+}
