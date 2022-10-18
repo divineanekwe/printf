@@ -10,7 +10,7 @@
   *
   * Return: Pointer to the correct function
   */
-int (*get_print(char c))(va_list, flags_t *f)
+int (*get_print(char c))(va_list, flags_t *)
 {
 	print_help_t types[] = {
 		{'i', print_i},
@@ -34,7 +34,7 @@ int (*get_print(char c))(va_list, flags_t *f)
 
 	for (i = 0; i < flags; i++)
 	{
-		if (types[i].c == s)
+		if (types[i].c == c)
 		{
 			return (types[i].f);
 		}
