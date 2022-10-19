@@ -16,6 +16,8 @@ typedef struct flags
 	int plus;
 	int space;
 	int hash;
+	int _long;
+	int _short;
 } flags_t;
 
 /** print prototypes */

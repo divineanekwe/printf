@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	register int count = 0;
 	va_list arg;
 	const char *str;
-	flags_t flags = {0, 0, 0};
+	flags_t flags = {0, 0, 0, 0, 0};
 	int (*print_func)(va_list, flags_t *);
 
 	va_start(arg, format);
