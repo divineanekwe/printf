@@ -24,7 +24,7 @@ int print_percent(va_list arg, __attribute__((unused)) flags_t *flag)
   *
   * Return: The number of character(s) printed
   */
-int print_S(va_list arg, flags_t *flag)
+int print_S(va_list arg, __attribute__((unused)) flags_t *flag)
 {
 	int count = 0;
 	char *hex_str;
