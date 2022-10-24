@@ -17,8 +17,8 @@ void init_flags(__attribute__((unused)) va_list arg, flags_t *flag)
 	flag->space = 0;
 	flag->long_l = 0;
 	flag->short_h = 0;
-	flag->precision = 0;
 	flag->unsigned_u = 0;
+	flag->precision = UINT_MAX;
 }
 
 /**
