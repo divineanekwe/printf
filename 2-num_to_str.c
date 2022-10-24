@@ -26,12 +26,12 @@ char *num_to_str(long int num, int base, int type)
 	str = &buffer[49];
 	*str = '\0';
 	do {
-		*(--str) = hexa_str[n % base];
+		*--str = hexa_str[n % base];
 		n /= base;
 	} while (n != 0);
 	if (sign)
 	{
-		*(--str) = sign;
+		*--str = sign;
 	}
 	return (str);
 }

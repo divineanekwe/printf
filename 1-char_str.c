@@ -16,7 +16,7 @@ int _putchar(char c)
 
 	if (c == -1 || i >= 1024)
 	{
-		write(1, &buffer, i);
+		write(1, buffer, i);
 		i = 0;
 	}
 	if (c != -1)
@@ -51,8 +51,7 @@ int _putstr(char *str)
   */
 int print_c(va_list arg, flags_t *flag)
 {
-	unsigned int count = 0, width = 1;
-	char c = (char)va_arg(arg, int);
+	unsigned int count = 0, width = 1, c = va_arg(arg, int);
 
 	if (flag->minus)
 		count += _putchar(c);
@@ -75,7 +74,8 @@ int print_s(va_list arg, flags_t *flag)
 	unsigned int count = 0, width = 0, i = 0, j;
 	char *str = va_arg(arg, char *);
 
-	if (!str)
+	switch ((int)!str)
+	case 1:
 		str = "(null)";
 	width = j = _strlen(str);
 	if (flag->precision < width)
