@@ -48,7 +48,8 @@ int (*get_specifier(char *str))(va_list arg, flags_t *flag)
   * @arg: Variable argument in _printf
   * @flag: Pointer variable to flags_t type
   *
-  * Return: The number of character(s) printed
+  * Return: The number of character(s) printed.
+  * Otherwise, return 0
   */
 int get_print_func(char *str, va_list arg, flags_t *flag)
 {

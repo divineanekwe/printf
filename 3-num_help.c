@@ -118,7 +118,7 @@ int print_num_left_shift(char *str, flags_t *flag)
 	{
 		fill = '0';
 	}
-	neg = neg2 = !flag->unsigned_u && *str == '-';
+	neg = neg2 = (!flag->unsigned_u && *str == '-');
 	if (neg && i < flag->width && fill == '0' && !flag->minus)
 	{
 		str++;
