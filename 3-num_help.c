@@ -37,7 +37,7 @@ int _strlen(char *str)
 int print_num(char *str, flags_t *flag)
 {
 	unsigned int i = _strlen(str);
-	int neg = !flag->unsigned_u && *str == '-';
+	int neg = (!flag->unsigned_u && *str == '-');
 
 	if (!flag->precision && *str == '0' && !str[1])
 		str = "";
@@ -46,6 +46,15 @@ int print_num(char *str, flags_t *flag)
 		str++;
 		i--;
 	}
+	if (flag->precision != UINT_MAX)
+	{
+		while (i++ < flag->precision)
+		{
+			*--str = '0';
+		}
+	}
+	if (neg)
+		*--str = '-';
 	if (!flag->minus)
 		return (print_num_right_shift(str, flag));
 	return (print_num_left_shift(str, flag));
